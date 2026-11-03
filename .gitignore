@@ -1,68 +1,144 @@
-# Prerequisites
-*.d
+# ==========================================
+# CMAKE BUILD DIRECTORIES
+# ==========================================
 
-# Compiled Object files
-*.slo
-*.lo
+**/build/
+**/Build/
+**/build-*/
+**/cmake-build-*/
+CMake-build-*/
+
+# ==========================================
+# CMAKE GENERATED FILES
+# ==========================================
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+CMakeScripts/
+_deps/
+Testing/
+CMakeUserPresets.json
+CMakeLists.txt.user
+
+# ==========================================
+# NINJA GENERATED FILES
+# ==========================================
+
+.ninja_deps
+.ninja_log
+.ninja_lock
+build.ninja
+
+# ==========================================
+# COMPILED OBJECT FILES
+# ==========================================
+
 *.o
 *.obj
+*.lo
+*.slo
 
-# Precompiled Headers
+# ==========================================
+# PRECOMPILED HEADERS
+# ==========================================
+
 *.gch
 *.pch
 
-# Linker files
-*.ilk
+# ==========================================
+# STATIC LIBRARIES
+# ==========================================
 
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
+*.la
+*.lai
 
-# Executables
+# ==========================================
+# DYNAMIC LIBRARIES
+# ==========================================
+
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# ==========================================
+# EXECUTABLE FILES
+# ==========================================
+
 *.exe
 *.out
 *.app
 
-# Build directories
-build/
-Build/
-build-*/
+# ==========================================
+# MSVC / VISUAL STUDIO
+# ==========================================
 
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.ilk
+*.pdb
+*.idb
+*.ipch
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
 
-# Temporary files
+# ==========================================
+# DEBUG INFORMATION
+# ==========================================
+
+*.dwo
+*.dSYM/
+
+# ==========================================
+# TEMPORARY AND BACKUP FILES
+# ==========================================
+
 *.tmp
+*.temp
 *.log
 *.bak
+*.old
 *.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
 
-# vcpkg
+# ==========================================
+# PACKAGE MANAGERS
+# ==========================================
+
 vcpkg_installed/
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
 
-# debug information files
-*.dwo
+# ==========================================
+# TEST OUTPUT AND CACHE
+# ==========================================
 
-# test output & cache
-Testing/
 .cache/
+test-results/
+*.gcda
+*.gcno
+*.profraw
+*.profdata
+
+# ==========================================
+# IDE SETTINGS
+# ==========================================
+
+.idea/
+
+# Uncomment if you don't want to upload VS Code settings
+# .vscode/
