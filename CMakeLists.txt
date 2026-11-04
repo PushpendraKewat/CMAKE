@@ -5,7 +5,23 @@ project(MyApp LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(MyApp main.cpp)
+# External dependencies
+add_subdirectory(external/glfw)
 
-target_sources(MyApp PRIVATE math.cpp)
-target_compile_options(MyApp PRIVATE /W4)
+# Main executable
+add_executable(${PROJECT_NAME}
+    main.cpp
+    math.cpp
+)
+
+# Link libraries
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE glfw
+)
+
+# Compiler warnings
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /W4)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
+endif()
